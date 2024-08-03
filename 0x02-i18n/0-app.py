@@ -1,32 +1,16 @@
 #!/usr/bin/env python3
+'''Task 0: Basic Flask app
+'''
+
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
-"""
-Simple Flask Application
 
-This application serves a single route
-, `/`, which renders the `0-index.html` template.
-
-Usage:
-    python app.py
-
-Attributes:
-    app (Flask): The Flask application instance.
-"""
-
-
-@app.route("/")
+@app.route('/')
 def index():
-    """
-    Index Route
-
-    Renders the `0-index.html` template.
-
-    Returns:
-        str: The rendered HTML template.
-    """
-    return render_template('0-index.html')
+    '''default route'''
+    return render_template("0-index.html",)
 
 
 if __name__ == "__main__":
